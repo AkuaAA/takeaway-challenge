@@ -1,6 +1,8 @@
 require 'menu'
 
 describe Menu do
+  let(:dish) { ["Avocado",1] }
+
   it 'shows a list of dishes with prices' do
     expect(subject.view_dishes).to eq subject.menu
   end
@@ -11,8 +13,8 @@ describe Menu do
 
 describe '#selects_dishes' do
   it 'selects dishes from menu and adds to empty order' do
-    subject.selects_dishes(dish)
-    expect(subject.blank_order).to eq [dish]
+    subject.selects_dishes("Avocado")
+    expect(subject.selects_dishes(:dish)).to eq subject.blank_order
   end
 end
 end
