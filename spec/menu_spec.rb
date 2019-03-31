@@ -1,7 +1,7 @@
 require 'menu'
 
 describe Menu do
-  let(:dish) { ["Avocado",1] }
+  let(:dish) { double :dish ["Avocado",1] }
 
   it 'shows a list of dishes with prices' do
     expect(subject.view_dishes).to eq subject.menu
