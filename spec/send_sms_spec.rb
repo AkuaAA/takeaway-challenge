@@ -1,4 +1,4 @@
-require 'text_confirmation'
+require 'send_sms'
 
 describe 'Confirmation' do
   it 'sends text confirmation of order' do

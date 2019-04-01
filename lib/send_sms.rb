@@ -11,16 +11,10 @@ class Confirmation
 
   def text_sent
     @client.messages.create(
-      from: ENV["TWILIO_NUMBER"],
+      from: ENV["TWILIO_PHONE_NUMBER"],
       to: ENV["MY_PHONE_NUMBER"],
       body: "Thank you! Your order was placed and will be delivered before 18:52"
     )
-  end 
+  end
 
 end
-
-#bundle exec ruby text_confirmation.rb
-
-#+441678202045
-#ACc990841f1e073f6162bce8761bac9b66
-#c6ee5845f781acb14381e5055e001eb7
